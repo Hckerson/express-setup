@@ -15,15 +15,5 @@ export const config = {
     password: process.env.APP_PASSWORD,
   },
   api: {
-    amadeus: {
-      apiKey: process.env.AMADEUS_API_KEY,
-      apiSecret: process.env.AMADEUS_API_SECRET,
-      baseUrl: process.env.AMADEUS_BASE_URL,
-      accessToken: process.env.AMADEUS_ACCESS_TOKEN,
-    },
-    openWeather: {
-      baseUrl: process.env.OPENWEATHER_BASE_URL || "",
-      apiKey: process.env.OPENWEATHER_API_KEY || "",
-    },
   },
 };
