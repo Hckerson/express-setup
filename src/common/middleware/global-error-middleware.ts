@@ -1,9 +1,9 @@
 import { logger } from "../../lib/logger";
-import { ErrorType } from "../types/error.types";
 import { NextFunction, Request, Response } from "express";
+import { RouteError } from "../errors/route-errors";
 
 const errorMiddleWare = (
-  err: ErrorType,
+  err: RouteError,
   req: Request,
   res: Response,
   next: NextFunction,

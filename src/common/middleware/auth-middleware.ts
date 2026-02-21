@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import { logger } from "../../lib/logger";
-import { config } from "../../common/config";
+import { appConfig } from "../../common/config";
 import { NextFunction, Request, Response } from "express";
 import { RequestWithUser } from "../interface/req";
 import { UserRepository } from "../../repositories/user.repository";
@@ -35,7 +35,7 @@ const authMiddleware = async (
     return next();
   } catch (error) {
     logger.error("Error in auth middleware", error);
-    return res.status(401).json({ message: "Unauthorized" });
+    return res.status(401).json({ message: "Unauthorized" });https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/USD
   }
 };
 
@@ -44,7 +44,7 @@ async function verifyAuthHeader(token: string) {
   try {
     const payload = jwt.verify(
       token,
-      config.auth.jwtSecret || "",
+      appConfig.auth.jwtSecret || "",
     ) as jwt.JwtPayload;
 
     if (payload) {
