@@ -1,6 +1,6 @@
 import "dotenv/config";
 
-export const config = {
+export const appConfig = {
   app: {
     appName: process.env.APP_NAME,
     frontendUrl: process.env.FRONTEND_URL,
