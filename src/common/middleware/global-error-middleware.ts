@@ -1,9 +1,10 @@
-import { ErrorType } from "../types/error.types";
+import { logger } from "../../lib/logger";
 import { NextFunction, Request, Response } from "express";
 import { AmadeusError, OpenWeatherError } from "../errors/api.error";
+import { RouteError } from "../errors/route-errors";
 
 const errorMiddleWare = (
-  err: ErrorType,
+  err: RouteError,
   req: Request,
   res: Response,
   next: NextFunction,

@@ -21,7 +21,7 @@ if (!_env.success) {
   process.exit(1);
 }
 
-export const config = {
+export const appConfig = {
   app: {
     env: _env.data.NODE_ENV,
     port: _env.data.PORT,
